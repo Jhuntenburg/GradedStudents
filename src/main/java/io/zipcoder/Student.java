@@ -38,9 +38,10 @@ public class Student {
     public String getExamScores() {
         StringBuilder examScores = new StringBuilder();
         for (int i = 0; i < examScores.length(); i++) {
+            examScores.append("Exam " + (i + 1 ) + " -> " + this.examScores);
 
-        }
-        return examScores.append("Exam " + i + 1 + " -> " + this.examScores);
+        }            return examScores.toString();
+
     }
 
     public void addExamScore(double examScore) {
