@@ -1,17 +1,18 @@
 package io.zipcoder;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Student {
     String firstName;
     String lastName;
-    ArrayList<Double> examScores;
+    List<Double> examScores;
 
 
-    public Student(String firstName, String lastName, ArrayList<Double> testScores) {
+    public Student(String firstName, String lastName, Double[] testScores) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.examScores = testScores;
+        this.examScores = Arrays.asList(testScores); //should this be test scores likein the readme?
 
     }
 
@@ -55,7 +56,7 @@ public class Student {
     }
     public double getAverageExamScore(){
         double sum = 0.0;
-        for( int i = 0; i < this.examScores.size(); i++){
+        for(int i = 0; i < this.examScores.size(); i++){
             sum += this.examScores.get(i);
 
         }
